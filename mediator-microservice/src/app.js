@@ -3,7 +3,7 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import { Mediator } from "./lib/Mediator.js";
 import { Client } from "./lib/Client.js";
-import { ConfigService } from "./services/configService.js";
+import { ConfigService } from "./services/ConfigService.js";
 import { CommunicationService } from "./services/CommunicationService.js";
 
 const PORT = 8001;
