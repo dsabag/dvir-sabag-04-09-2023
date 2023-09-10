@@ -21,12 +21,7 @@ const communicationService = new CommunicationService(
   config.polling_frequency
 );
 
-export const io = new Server(httpServer, {
-  cors: {
-    origin: "http://localhost",
-    methods: ["GET", "POST"],
-  },
-});
+export const io = new Server(httpServer);
 
 io.on("connection", async (socket) => {
   socket.on("register", (clientId) => {
