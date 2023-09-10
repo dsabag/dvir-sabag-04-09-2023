@@ -23,7 +23,7 @@ const communicationService = new CommunicationService(
 
 export const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: "http://localhost",
     methods: ["GET", "POST"],
   },
 });
