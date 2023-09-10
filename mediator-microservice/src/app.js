@@ -3,7 +3,7 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import { Mediator } from "./lib/Mediator.js";
 import { Client } from "./lib/Client.js";
-import { ConfigService } from "./services/ConfigService.js";
+import { ConfigService } from "./services/configService.js";
 import { CommunicationService } from "./services/CommunicationService.js";
 
 const PORT = 8001;
@@ -22,9 +22,9 @@ const communicationService = new CommunicationService(
 );
 
 export const io = new Server(httpServer, {
-  allowRequest: (req, callback) => {
-    const noOriginHeader = req.headers.origin === undefined;
-    callback(null, noOriginHeader);
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
   },
 });
 
