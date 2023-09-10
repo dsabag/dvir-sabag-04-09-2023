@@ -21,7 +21,12 @@ const communicationService = new CommunicationService(
   config.polling_frequency
 );
 
-export const io = new Server(httpServer);
+export const io = new Server(httpServer, {
+  allowRequest: (req, callback) => {
+    const noOriginHeader = req.headers.origin === undefined;
+    callback(null, noOriginHeader);
+  },
+});
 
 io.on("connection", async (socket) => {
   socket.on("register", (clientId) => {
