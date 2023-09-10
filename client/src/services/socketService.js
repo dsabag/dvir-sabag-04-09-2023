@@ -1,3 +1,3 @@
 import { io } from "socket.io-client";
 
-export const socket = io("ws://localhost:8001");
+export const socket = io("ws://51.20.42.191:8001");
