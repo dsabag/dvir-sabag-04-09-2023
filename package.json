@@ -1,0 +1,8 @@
+{
+  "name": "spinomenal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "cd client && npm i && npm start && cd .. && cd server && npm i && npm start && cd .. && cd mediator-microservice && npm i && npm start"
+  }
+}
