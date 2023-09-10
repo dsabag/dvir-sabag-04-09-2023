@@ -1,0 +1,8 @@
+{
+  "polling_frequency": 2000,
+  "score_ranges": {
+    "min": 1,
+    "max": 100
+  },
+  "allowed_clients": [1, 2, 3, 4, 5]
+}
